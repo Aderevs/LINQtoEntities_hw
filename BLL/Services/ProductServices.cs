@@ -69,13 +69,19 @@ namespace BLL.Services
 
         public async Task<Product> GetProductByName(string name)
         {
-           return await _productRepository.GetByIdIncludWord(name);
+            return await _productRepository.GetByIdIncludWord(name);
         }
 
         public async Task<IEnumerable<Product>> ProductsByWord(string word)
         {
             var products = await _productRepository.Select();
-            var prod = products.Where(p => p.Name.Contains(word)).ToList();
+            var prod = products.Where(p =>
+                {
+                    var prodsKeywords = p.KeyWords.Select(kw => kw.KeyWords.KeyWord);
+                    if (prodsKeywords.Contains(word))
+                        return true;
+                    return p.Name.Contains(word);
+                }).ToList();
             return prod;
         }
     }
