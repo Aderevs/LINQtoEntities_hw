@@ -1,0 +1,21 @@
+﻿*, ul {
+    margin: 0;
+    padding: 0;
+}
+
+.layout-divide-two {
+    display: grid;
+    grid-template-columns: 320px calc(100% - 320px);
+}
+
+section.sticky-menu{
+    position: sticky;
+    top: 60px;
+}
+
+@media (max-width: 1024px) {
+    .layout-divide-two {
+        display: grid;
+        grid-template-columns: 0px 100%;
+    }
+}

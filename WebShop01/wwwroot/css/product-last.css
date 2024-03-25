@@ -1,0 +1,150 @@
+﻿.last-product-area {
+    padding: 20px;
+}
+    .last-product-area h2 {
+        font: 20px "Segoe UI", sans-serif;
+    }
+
+    .last-product-area .product-area{
+        position: relative;
+    }
+
+        .last-product-area .product-area .product-list {
+            display: grid;
+        }
+
+            .last-product-area .product-area .product-list .product-sector {
+                border-right: 1px solid #e9e9e9;
+                border-bottom: 1px solid #e9e9e9;
+                padding: 20px;
+            }
+
+                .last-product-area .product-area .product-list .product-sector img {
+                    width: 100%;
+                }
+
+        .last-product-area .product-area .product-sector {
+            display: block;
+        }
+
+            .last-product-area .product-area .product-sector p.name {
+                display: block;
+                font: 14px "Segoe UI", sans-serif;
+                margin: 20px 0;
+                color: #000;
+                text-decoration: none;
+                transition: all 0.2s ease;
+                overflow: hidden;
+                height: 38px;
+            }
+
+                .last-product-area .product-area .product-sector p.name:hover {
+                    color: #F84147;
+                    text-decoration: underline;
+                }
+
+            .last-product-area .product-area .product-sector p.price {
+                font-size: 24px;
+                color: #000;
+            }
+
+                .last-product-area .product-area .product-sector p.price.action {
+                    color: #f84147;
+                }
+
+        .last-product-area .product-area .prompt {
+            position: absolute;
+            right: 0px;
+            border: 1px solid #e9e9e9;
+            border-top: 0px;
+            cursor: pointer;
+        }
+
+        .last-product-area .product-area.active .prompt {
+            display: none;
+        }
+
+        .last-product-area .product-area .prompt p {
+            text-align: center;
+            color: #3e77aa;
+            font-size: 14px;
+        }
+
+        .last-product-area .product-area .prompt:hover p {
+            color: #F84147;
+        }
+
+
+
+@media (min-width: 0px) and (max-width: 540px) {
+    .last-product-area .product-area .product-list {
+        grid-template-columns: 50% 50%;
+    }
+
+    .last-product-area .product-area .prompt {
+        width: 100%;
+    }
+
+    .last-product-area:not(.active) .product-sector:not(.product-sector:nth-child(-n+2)) {
+        display: none;
+    }
+}
+
+@media (min-width: 540px) and (max-width: 768px) {
+    .last-product-area .product-area .product-list {
+        grid-template-columns: 33% 34% 33%;
+    }
+
+    .last-product-area .product-area .prompt {
+        width: calc(33% + 1px)
+    }
+
+    .last-product-area:not(.active) .product-sector:not(.product-sector:nth-child(-n+3)) {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .last-product-area .product-area .product-list {
+        grid-template-columns: 25% 25% 25% 25%;
+    }
+
+    .last-product-area .product-area .prompt {
+        width: calc(25% + 1px)
+    }
+
+    .last-product-area:not(.active) .product-sector:not(.product-sector:nth-child(-n+4)) {
+        display: none;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1200px) {
+    .last-product-area .product-area .product-list {
+        grid-template-columns: 20% 20% 20% 20% 20%;
+    }
+
+    .last-product-area .product-area .prompt {
+        width: calc(20%);
+        right: 4px;
+    }
+
+    .last-product-area:not(.active) .product-sector:not(.product-sector:nth-child(-n+5)) {
+        display: none;
+    }
+}
+
+@media (min-width: 1200px) {
+    .last-product-area .product-area .product-list {
+        grid-template-columns: 16.6% 16.6% 16.6% 16.6% 16.6% 16.6%;
+    }
+
+    .last-product-area .product-area .prompt {
+        width: calc(16.6% + 1px);
+        right: 4px;
+    }
+
+    .last-product-area:not(.active) .product-sector:not(.product-sector:nth-child(-n+6)) {
+        display: none;
+    }
+
+}

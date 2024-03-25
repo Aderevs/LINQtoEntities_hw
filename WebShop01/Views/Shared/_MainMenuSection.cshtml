@@ -1,0 +1,49 @@
+﻿@model IEnumerable<BLL.Entity.Category>
+
+<section class="sticky-menu">
+    <div class="menu-right-area">
+        <div class="menu-tab">
+            <ul>
+                @foreach (var item in Model)
+                {
+                    <li>
+                        <div class="menu-sector">
+                            <i class="@item.Icon"></i>
+                            <a asp-controller="shop" asp-action="category" asp-route-category="@item.Name">@item.Name</a>
+                        </div>
+                    </li>
+                }
+            </ul>
+        </div>
+        <div class="menu-tab">
+            <ul>
+                <li>
+                    <div class="menu-sector">
+                        <i class="fa-sharp fa-solid fa-circle-info"></i>
+                        <a href="#">Довідковий центр</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="menu-tab">
+            <ul>
+                <li>
+                    <div class="menu-sector menu-green">
+                        <i class="fa-solid fa-paper-plane"></i>
+                        <a href="#">Чат з Vilka</a>
+                    </div>
+                </li>
+            </ul>
+        </div> 
+        <div class="menu-tab">
+            <ul>
+                <li>
+                    <div class="menu-sector">
+                        <i class="fa-solid fa-shop"></i>
+                        <a href="#">Точки видачі Vilka</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>

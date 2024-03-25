@@ -1,0 +1,16 @@
+﻿@model IEnumerable<BLL.Entity.Category>
+<div class="layout-divide-two">
+    <div>
+        <partial name="_MainMenuSection" />
+    </div>
+    <div>
+        <partial name="_BanerSection" />
+        <partial name="_CatalogSection" />
+        <partial name="_LastProductSection" />
+    </div>
+</div>
+
+@section Scripts{
+    <script src="~/js/last-product.js" asp-append-version="true"></script>
+    <script src="~/js/baner.js" asp-append-version="true"></script>
+}

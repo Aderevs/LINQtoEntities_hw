@@ -1,0 +1,36 @@
+﻿<section>
+    <div class="baner-section" id="baner">
+        <div class="baner" v-on:mouseover="BanerOver" v-on:mouseleave="BanerLeave">
+            <div class="baner-preolader-pic">
+                <img class="baner-desktop" src="img/host/Baner1.jpg" />
+                <img class="baner-mobile" src="img/host/BanerMobile1.jpg" />
+            </div>
+            <div class="all-baners" ref="items">
+                @for (int i = 0; i < 10; i++)
+                {
+                    if (i % 2 == 0)
+                    {
+                        <div class="baner-sector">
+                            <a href="#">
+                                <img class="baner-desktop" src="img/host/Baner1.jpg" />
+                                <img class="baner-mobile" src="img/host/BanerMobile1.jpg" />
+                            </a>
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="baner-sector">
+                            <img class="baner-desktop" src="img/host/Baner2.jpg" />
+                            <img class="baner-mobile" src="img/host/BanerMobile2.jpg" />
+                        </div>
+                    }
+                }
+            </div>
+            <div class="clickable-arrow">
+                <i class="fa fa-chevron-left" v-on:click="SwipeBefore"></i>
+                <i class="fa fa-chevron-right" v-on:click="SwipeNext"></i>
+            </div>
+        </div>
+    </div>
+</section>
+

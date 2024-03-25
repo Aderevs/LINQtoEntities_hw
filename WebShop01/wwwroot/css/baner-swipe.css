@@ -1,0 +1,136 @@
+.baner-section {
+    width: 100%;
+    position: relative;
+}
+
+    .baner-section .baner-preolader-pic img {
+        width: 100%;
+    }
+
+    .baner-section .baner {
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+    }
+        .baner-section .baner .all-baners {
+            top: 0;
+            position: absolute;
+            left: 0%;
+            display: flex;
+            transition: 0.7s ease-out;
+        }
+
+        .baner-section .baner .baner-sector {
+            width: 100%;
+            position: relative;
+        }
+
+            .baner-section .baner .all-baners img {
+                width: 100%;
+            }
+
+        .baner-section .baner .clickable-arrow {
+            position: absolute;
+            width: 100%;
+            height: 50px;
+            top: calc(50% - 25px);
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: stretch;
+            pointer-events: none;
+        }
+
+            .baner-section .baner .clickable-arrow i {
+                background: rgba(255,255,255,0.1);
+                pointer-events: auto;
+                font-size: 50px;
+                font-weight: 600;
+                color: rgba(255,255,255,0.8);
+                transition: 0.2s;
+            }
+
+                .baner-section .baner .clickable-arrow i:hover {
+                    color: rgba(255,255,255,0.9);
+                    background: rgba(255,255,255,0.2);
+                }
+                .baner-section .baner .clickable-arrow i:first-child:hover {
+                    text-shadow: 4px 0 #F84147;
+                }
+                .baner-section .baner .clickable-arrow i:last-child:hover {
+                    text-shadow: -4px 0 #F84147;
+                }
+
+            .baner-section .baner .clickable-arrow i:active {
+                color: rgba(255,255,255,1);
+            }
+
+
+@media (min-width: 0px) {
+    .baner-section {
+        padding: 0px;
+    }
+    .baner-desktop{
+        display: none;
+    }
+    .baner-mobile {
+        display: block;
+    }
+
+    .baner-section .baner .clickable-arrow {
+        padding: 0;
+    }
+}
+
+@media (min-width: 540px) {
+    .baner-section {
+        padding: 0px;
+    }
+
+    .baner-desktop {
+        display: none;
+    }
+
+    .baner-mobile {
+        display: block;
+    }
+
+        .baner-section .baner .clickable-arrow {
+            padding: 0;
+        }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .baner-section {
+        padding: 20px;
+    }
+
+    .baner-desktop {
+        display: block;
+    }
+
+    .baner-mobile {
+        display: none;
+    }
+        .baner-section .baner .clickable-arrow {
+            padding: 0 15px;
+        }
+}
+
+@media (min-width: 1024px) {
+    .baner-section {
+        padding: 40px;
+    }
+
+    .baner-desktop {
+        display: block;
+    }
+
+    .baner-mobile {
+        display: none;
+    }
+
+        .baner-section .baner .clickable-arrow {
+            padding: 0 15px;
+        }
+}

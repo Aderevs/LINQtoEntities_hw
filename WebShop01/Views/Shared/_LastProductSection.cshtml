@@ -1,0 +1,18 @@
+﻿<section>
+    <div class="last-product-area" v-bind:class="{active:expandListShow}" id="last-product">
+        <h2>{{header}}</h2>
+        <div class="loader" v-show="!loaded">loading</div>
+        <div class="product-area" v-show="loaded">
+            <div class="product-list">
+                <a v-bind:href="'/shop/productpage/' + product.name" class="product-sector" v-for="product in products">
+                    <img v-on:error="ErrorLoadImage" v-bind:src="product.imageUrl" alt="img/NotFind.png">
+                    <p class="name">{{product.name}}</p>
+                    <p class="price">{{product.price}}₴</p>
+                </a>
+            </div>
+            <div class="prompt" v-on:click="ShowAllList" v-show="!expandListShow">
+                <p>Показати ще</p>
+            </div>
+        </div>
+    </div>
+</section>

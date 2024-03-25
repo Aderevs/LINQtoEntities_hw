@@ -1,0 +1,91 @@
+﻿@model BLL.Entity.CategoryInfo
+@{
+    ViewData["Title"] = "Privacy Policy";
+}
+
+
+<section>
+    <main id="category-product">
+        <div class="category-header">
+            <a asp-action="Index">
+                <i class="fa-solid fa-house-chimney"></i><span>Головна</span>
+            </a>
+            <span class="arrow">
+                <i class="fa-solid fa-chevron-right"></i>
+            </span>
+            <span>@Model.CategoryName</span>
+        </div>
+        <div class="category-product-filter">
+        </div>
+        <div class="layout-divide-two">
+            <div class="category-filter">
+                @foreach (var select in Model.Selections)
+                {
+                    <details open="open">
+                        <summary>
+                            <span class="arrow">@select.Key</span>
+                            <span class="quantity">@select.Value.Length</span>
+                        </summary>
+                        <ul class="selections">
+                            @foreach (var change in select.Value)
+                            {
+                                <li>
+                                    <input class="custom-checkbox" type="checkbox" value="@change" id="@change" v-on:click="Check">
+                                    <label for="@change">@change</label>
+                                </li>
+                            }
+                        </ul>
+                    </details>
+                }
+                <details open="open">
+                    <summary>
+                        <span class="arrow">Ціна</span>
+                    </summary>
+                    <div class="range_container">
+                        <div class="form_control">
+                            <div class="form_control_container">
+                                <input class="hidden" ref="inputMin" value="@Model.MinPrice" />
+                                <input v-model="min" min="@Model.MinPrice" max="@Model.MaxPrice" />
+                            </div>
+                            <span>-</span>
+                            <div class="form_control_container">
+                                <input class="hidden" ref="inputMax" value="@Model.MaxPrice" />
+                                <input v-model="max" min="@Model.MinPrice" max="@Model.MaxPrice" />
+                            </div>
+                            <div>
+                                <button v-on:click="Request">Ok</button>
+                            </div>
+                        </div>
+                        <div class="sliders_control">
+                            <input type="range" v-model="min" value="@Model.MinPrice" min="@Model.MinPrice" max="@Model.MaxPrice" />
+                            <input type="range" v-model="max"  value="@Model.MaxPrice" min="@Model.MinPrice" max="@Model.MaxPrice" />
+                        </div>
+                    </div>
+                </details>
+            </div>
+            <div>
+                <div class="category-product-area">
+                    <div class="loader" v-show="!loaded">loading</div>
+                    <div class="product-area" v-show="loaded" >
+                        <div class="product-list">
+                            <div class="product-sector" v-for="product in products">
+                                <a v-bind:href="'/shop/productpage/' + product.name">
+                                    <img v-on:error="ErrorLoadImage" v-bind:src="product.imageUrl" alt="img/NotFind.png">
+                                    <p class="name">{{product.name}}</p>
+                                    <p class="price">{{product.price}}₴</p>
+                                    <div v-if="product.description != null" class="prompt">
+                                        <p>{{product.description}}</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+        </div>
+    </main>
+</section>
+
+@section Scripts{
+    <script src="~/js/category-product.js" asp-append-version="true"></script>
+}

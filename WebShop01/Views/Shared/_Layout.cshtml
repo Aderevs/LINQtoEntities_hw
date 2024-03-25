@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - WebShop01</title>
+    <link rel="stylesheet" href="~/css/preolader.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/product-menu.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/product-category.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/baner-swipe.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/price.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/catalog.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/product-last.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/product-search.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/main-header.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/style.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/side-menu.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/product-page.css" asp-append-version="true" />
+    
+</head>
+<body>
+    <partial name="_Header" />
+    <partial name="_SideMenu" />
+    <main role="main" class="container-xl main-body">
+        @RenderBody()
+    </main>
+              
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.8/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+    <script src="https://kit.fontawesome.com/686c553798.js" crossorigin="anonymous"></script>
+    @*<script src="~/js/v-click-outside.js"></script>*@
+    <script src="~/js/header.js"></script>
+    <script src="~/js/side-menu.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

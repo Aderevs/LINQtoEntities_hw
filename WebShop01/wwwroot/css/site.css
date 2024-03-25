@@ -1,0 +1,56 @@
+html {
+  font-size: 14px;
+}
+
+
+main.main-body{
+    margin-top: 72px;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+button {
+    text-decoration: none;
+    outline: none;
+    border: none;
+}
+
+ol, ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+
+@media (min-width: 768px) {
+    html {
+    font-size: 16px;
+  }
+}
+
+section {
+    padding: 0;
+}
+
+body {
+    padding: 0;
+}
+
+html {
+    padding: 0;
+}
+
+
+@media (min-width: 1200px) 
+{
+    .container, .container-lg, .container-md, .container-sm, .container-xl {
+        max-width: 1620px;
+    }
+}

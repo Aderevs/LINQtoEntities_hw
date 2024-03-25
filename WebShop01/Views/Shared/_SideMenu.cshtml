@@ -1,0 +1,343 @@
+﻿<section class="side-menu-section"id="side-menu">
+    <div class="side-menu-background" v-bind:class="{active:showSideMenu}">
+        <div class="side-container drawer-content" v-bind:class="{active:showSideMenu}">
+            <nav class="side-nav">
+                <div class="side-menu">
+                    <div class="side-menu-header">
+                        <a class="logo" href="">
+                            <svg viewBox="0 0 512 512">
+                                <path fill-rule="evenodd" stroke="none" d="M 286.868 116.631 C 286.868 116.636 286.868 174.922 286.868 174.927 C 286.871 174.927 323.156 174.927 323.160 174.927 C 323.160 174.922 323.705 116.915 323.705 116.909 C 323.705 116.909 322.304 112.001 321.063 110.245 C 319.635 108.225 317.106 105.793 314.812 104.864 C 309.478 102.704 301.018 102.856 295.628 104.873 C 293.280 105.752 290.466 107.949 289.035 110.008 C 287.843 111.725 286.868 116.630 286.868 116.631 M 190.544 116.351 C 190.544 116.357 190.544 174.643 190.544 174.649 C 190.548 174.649 226.832 174.649 226.836 174.649 C 226.836 174.643 227.381 116.636 227.382 116.630 C 227.381 116.630 225.980 111.723 224.739 109.966 C 223.311 107.946 220.782 105.514 218.488 104.585 C 213.154 102.425 204.695 102.577 199.305 104.594 C 196.957 105.473 194.142 107.670 192.711 109.729 C 191.519 111.446 190.544 116.351 190.544 116.351 M 241.165 429.606 C 233.571 406.631 231.212 349.573 231.211 349.565 C 231.207 349.564 207.889 345.403 199.313 340.334 C 187.385 333.285 173.270 319.573 167.244 307.096 C 152.134 275.806 159.170 191.566 159.169 191.555 C 159.188 191.554 355.330 188.047 355.349 188.047 C 355.349 188.058 362.846 272.686 347.821 304.210 C 341.208 318.084 325.608 333.486 312.239 341.065 C 303.510 346.014 279.854 349.412 279.851 349.413 C 279.853 349.422 281.836 415.248 299.073 435.218 C 304.358 441.341 315.076 446.783 323.144 447.363 C 341.399 448.676 364.546 434.508 379.456 423.894 C 401.830 407.967 426.071 378.615 439.085 354.430 C 450.088 333.983 457.950 303.194 460.861 280.158 C 462.279 268.939 461.776 253.687 460.369 242.467 C 458.090 224.294 452.089 200.331 445.405 183.280 C 439.257 167.596 428.805 147.344 418.611 133.933 C 409.776 122.310 395.422 108.749 383.764 99.961 C 364.615 85.526 336.671 68.582 313.854 61.208 C 294.223 54.863 266.224 51.588 245.621 52.647 C 225.062 53.703 197.876 60.459 178.767 68.116 C 164.941 73.656 147.345 83.586 135.811 93.009 C 116.176 109.051 93.412 135.183 80.832 157.197 C 68.535 178.717 57.490 210.797 53.990 235.335 C 50.859 257.279 52.217 287.552 57.185 309.155 C 61.665 328.637 72.824 353.460 83.440 370.399 C 94.981 388.813 114.175 411.304 131.059 424.987 C 144.064 435.527 165.002 444.312 179.552 452.589 C 187.428 457.069 200.992 459.843 205.808 467.518 C 209.641 473.628 210.450 484.685 207.983 491.463 C 206.463 495.639 201.731 500.044 197.925 502.338 C 194.668 504.301 189.508 505.663 185.705 505.712 C 177.473 505.817 166.855 501.414 159.373 497.979 C 131.567 485.212 97.549 460.969 75.972 439.275 C 60.317 423.536 43.117 398.785 33.050 379.000 C 21.466 356.231 10.323 323.365 6.405 298.121 C 3.333 278.320 4.352 251.243 6.573 231.329 C 8.756 211.758 13.220 185.415 20.848 167.260 C 34.609 134.511 61.163 93.213 87.542 69.422 C 115.366 44.328 161.208 19.325 197.586 10.353 C 234.247 1.310 286.745 2.662 323.447 11.535 C 347.218 17.282 376.988 32.634 396.991 46.704 C 421.102 63.664 450.661 91.329 466.406 116.250 C 485.419 146.344 500.212 193.122 505.286 228.355 C 508.978 253.988 507.963 289.380 502.182 314.625 C 494.054 350.113 476.136 397.931 451.844 425.050 C 422.312 458.018 368.441 499.709 324.185 499.014 C 302.642 498.676 275.554 481.226 260.501 465.811 C 251.898 457.001 245.029 441.298 241.165 429.606 Z" />
+                            </svg>
+                            <i>Vilka</i>
+                        </a>
+                        <button class="side-menu-close" v-on:click="sideMenuVisible">
+                            <i class="fa fa-times"></i>
+                        </button>
+                    </div>
+                    <div>
+                        <div class="side-menu-auth">
+                            <a class="side-menu-auth-link" href="">
+                                <div class="side-menu-avatar">B</div>
+                                <div class="side-menu-user-info">
+                                    <span class="side-menu-user-name">Vladyslav</span>
+                                    <p class="side-menu-user-email">test322@gmail.com</p>
+                                </div>
+                            </a>
+                        </div>
+                        <ul class="side-menu-list side-menu-list-top">
+                            <li class="side-menu-item side-menu-item--bordered-bottom">
+                                <button class="side-menu-button">
+                                    <span class="side-menu-button-icon">
+                                        <i class="fa fa-th"></i>
+                                    </span>
+                                    Каталог товарів
+                                </button>
+                            </li>
+                            <li class="side-menu-item side-menu-item--bordered-bottom">
+                                <a class="side-menu-button" href="">
+                                    <span class="side-menu-button-icon">
+                                        <i class="far fa-question-circle"></i>
+                                    </span>
+                                    Довідковий центр
+                                </a>
+                                <a class="side-menu-button" href="">
+                                    <span class="side-menu-button-icon">
+                                        <i class="fab fa-telegram-plane"></i>
+                                    </span>
+                                    Чат з VILKA
+                                </a>
+                            </li>
+                            <li class="side-menu-item">
+                                <a class="side-menu-button" href="">
+                                    <span class="side-menu-button-icon">
+                                        <i class="fas fa-list-ul"></i>
+                                    </span>
+                                    Moї замовлення
+                                </a>
+                            </li>
+                            <li class="side-menu-item">
+                                <a class="side-menu-button" href="">
+                                    <span class="side-menu-button-icon">
+                                        <i class="fas fa-shopping-cart"></i>
+                                    </span>
+                                    Кошик
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="side-menu-list">
+                            <li class="side-menu-item">
+                                <a class="side-menu-button" href="">
+                                    <span class="side-menu-button-icon">
+                                        <i class="fas fa-heart"></i>
+                                    </span>
+                                    Список бажань
+                                </a>
+                            </li>
+                            <li class="side-menu-item">
+                                <a class="side-menu-button" href="">
+                                    <span class="side-menu-button-icon">
+                                        <i class="fas fa-people-carry"></i>
+                                    </span>
+                                    Забрати замовлення
+                                </a>
+                            </li>
+                            <li class="side-menu-item side-menu-item--bordered-bottom">
+                                <div class="side-menu-switch">
+                                    <p class="side-menu-switch-text">Мова</p>
+                                    <div>
+                                        <ul class="side-menu-lang-list">
+                                            <li>
+                                                <a class="side-menu-lang">EN</a>
+                                            </li>
+                                            <li class="second-lang">
+                                                <span class="side-menu-lang lang-active">
+                                                    <img class="ua-lang" src="https://xl-static.rozetka.com.ua/assets/icons/flag-ua.svg">
+                                                    UA
+                                                </span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="side-menu-switch">
+                                    <p class="side-menu-switch-text">Місто</p>
+                                    <div class="side-menu-city">
+                                        <button class="side-menu-city-btn">
+                                            <span class="side-menu-city-btn-text">Київ</span>
+                                            <i class="fas fa-chevron-down"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul class="side-menu-list drop-down-list" v-bind:class="{active:showUserInfo}">
+                            <li class="side-menu-item">
+                                <button class="side-menu-button">
+                                    <span class="side-menu-button-icon">
+                                        <i class="fas fa-money-bill-wave"></i>
+                                    </span>
+                                    Мій бонусний рахунок
+                                </button>
+                            </li>
+                            <li class="side-menu-item">
+                                <button class="side-menu-button">
+                                    <span class="side-menu-button-icon">
+                                        <i class="far fa-eye"></i>
+                                    </span>
+                                    Переглянуті товари
+                                </button>
+                            </li>
+                            <li class="side-menu-item">
+                                <button class="side-menu-button">
+                                    <span class="side-menu-button-icon">
+                                        <i class="far fa-comment-dots"></i>
+                                    </span>
+                                    Мої відгуки
+                                </button>
+                            </li>
+                            <li class="side-menu-item">
+                                <button class="side-menu-button">
+                                    <span class="side-menu-button-icon">
+                                        <i class="far fa-bell"></i>
+                                    </span>
+                                    Розсилки
+                                </button>
+                            </li>
+                            <li class="side-menu-item">
+                                <button class="side-menu-button">
+                                    <span class="side-menu-button-icon">
+                                        <i class="fas fa-dollar-sign"></i>
+                                    </span>
+                                    Підписка Premium
+                                </button>
+                            </li>
+                            <li class="side-menu-item">
+                                <button class="side-menu-button">
+                                    <span class="side-menu-button-icon">
+                                        <i class="far fa-envelope"></i>
+                                    </span>
+                                    Моє листування
+                                </button>
+                            </li>
+                            <li class="side-menu-item">
+                                <button class="side-menu-button">
+                                    <span class="side-menu-button-icon">
+                                        <i class="fas fa-balance-scale"></i>
+                                    </span>
+                                    Порівняння
+                                </button>
+                            </li>
+                            <li class="side-menu-item">
+                                <button class="side-menu-button">
+                                    <span class="side-menu-button-icon">
+                                        <i class="far fa-calendar-alt"></i>
+                                    </span>
+                                    Участь в акціях
+                                </button>
+                            </li>
+
+                        </ul>
+                        <div class="side-menu-item">
+                            <button class="side-menu-button" v-on:click="userInfoVisible">
+                                <span class="side-menu-button-icon">
+                                    <i class="fas fa-chevron-down small-icon" v-bind:class="{active:showUserInfo}"></i>
+                                </span>
+                                Розкрити
+                            </button>
+                        </div>
+                        <ul>
+                            <li class="side-menu-item">
+                                <div>
+                                    <div class="side-links">
+                                        <div class="side-links-item">
+                                            <h3 class="side-links-label">Інформація про компанію</h3>
+                                        </div>
+                                        <ul class="side-links-list">
+                                            <li class="side-links-item">
+                                                <a href="">Про нас</a>
+                                            </li>
+                                            <li class="side-links-item">
+                                                <a href="">Умови використання сайту</a>
+                                            </li>
+                                            <li class="side-links-item">
+                                                <a href="">Вакансії</a>
+                                            </li>
+                                            <li class="side-links-item">
+                                                <a href="">Контакти</a>
+                                            </li>
+                                            <li class="side-links-item">
+                                                <a href="">Усі категорії</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="side-links">
+                                        <div class="side-links-item">
+                                            <h3 class="side-links-label">Допомога</h3>
+                                        </div>
+                                        <ul class="side-links-list">
+                                            <li class="side-links-item">
+                                                <a href="">Доставка та оплата</a>
+                                            </li>
+                                            <li class="side-links-item">
+                                                <a href="">Кредит</a>
+                                            </li>
+                                            <li class="side-links-item">
+                                                <a href="">Гарантія</a>
+                                            </li>
+                                            <li class="side-links-item">
+                                                <a href="">Повернення товару</a>
+                                            </li>
+                                            <li class="side-links-item">
+                                                <a href="">Сервісні центри</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="side-links">
+                                        <div class="side-links-item">
+                                            <h3 class="side-links-label">Сервіси</h3>
+                                            <button class="button-icon" v-on:click="servicesVisible">
+                                                <i class="fas fa-chevron-down" v-bind:class="{active:showServices}"></i>
+                                            </button>
+                                        </div>
+                                        <ul class="drop-down-list" v-bind:class="{active:showServices}">
+                                            <li class="side-links-item">
+                                                <a>Бонусный рахунок</a>
+                                            </li>
+                                            <li class="side-links-item">
+                                                <a>Vilka Premium</a>
+                                            </li>
+                                            <li class="side-links-item">
+                                                <a>Подарункові сертифікати</a>
+                                            </li>
+                                            <li class="side-links-item">
+                                                <a>Vilka обмін</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="side-links">
+                                        <div class="side-links-item">
+                                            <h3 class="side-links-label">Партнерам</h3>
+                                            <button class="button-icon" v-on:click="partnerInfoVisible">
+                                                <i class="fas fa-chevron-down" v-bind:class="{active:showPartnerInfo}"></i>
+                                            </button>
+                                        </div>
+                                        <ul class="drop-down-list" v-bind:class="{active:showPartnerInfo}">
+                                            <li class="side-links-item">
+                                                <a>Продавати на Вілці</a>
+                                            </li>
+                                            <li class="side-links-item">
+                                                <a>Співпраця з нами</a>
+                                            </li>
+                                            <li class="side-links-item">
+                                                <a>Франчайзинг</a>
+                                            </li>
+                                            <li class="side-links-item">
+                                                <a>Оренда приміщень</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="side-menu-item side-menu-item--bordered-bottom">
+                                <div class="side-stores">
+                                    <h3 class="side-stores-label">Завантажуйте наші додатки</h3>
+                                    <ul class="side-stores-buttons">
+                                        <li>
+                                            <a href="" aria-label="Додаток для Android">
+                                                <img _ngcontent-rz-client-c93="" loading="lazy" alt="Google Play" src="https://xl-static.rozetka.com.ua/assets/img/design/button-google-play-ua.svg">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="" aria-label="Додаток для iOS">
+                                                <img _ngcontent-rz-client-c93="" loading="lazy" alt="AppStore" src="https://xl-static.rozetka.com.ua/assets/img/design/button-appstore-ua.svg">
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="side-menu-item side-menu-item--bordered-bottom">
+                                <div class="side-social">
+                                    <h3 class="side-social-label">Ми в соціальних мережах</h3>
+                                    <ul class="social-list">
+                                        <li>
+                                            <a class="social-links social-links--facebook">
+                                                <i class="fab fa-facebook-f"></i>
+                                            </a>
+                                        </li>
+                                        <li class="social-list-item">
+                                            <a class="social-links social-links--twitter">
+                                                <i class="fab fa-twitter"></i>
+                                            </a>
+                                        </li>
+                                        <li class="social-list-item">
+                                            <a class="social-links social-links--youtube">
+                                                <i class="fab fa-youtube"></i>
+                                            </a>
+                                        </li>
+                                        <li class="social-list-item">
+                                            <a class="social-links social-links--instagram">
+                                                <i class="fab fa-instagram"></i>
+                                            </a>
+                                        </li>
+                                        <li class="social-list-item">
+                                            <a class="social-links social-links--viber">
+                                                <i class="fab fa-viber"></i>
+                                            </a>
+                                        </li>
+                                        <li class="social-list-item">
+                                            <a class="social-links social-links--telegram">
+                                                <i class="fab fa-telegram-plane"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="side-menu-item side-menu-item--bordered-bottom">
+                                <button class="side-menu-button">Вийти з аккаунта</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+</section>

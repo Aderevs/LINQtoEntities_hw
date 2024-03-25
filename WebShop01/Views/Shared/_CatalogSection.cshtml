@@ -1,0 +1,25 @@
+﻿@*@model IEnumerable<CategoryModel>*@
+
+<section>
+    <div class="menu-botom-area">
+        <h2>Каталог товарів</h2>
+        <div class="menu-tab">
+            <ul>
+                @*@foreach (var item in Model)
+                {
+                    <li>
+                        <div class="menu-sector">
+                            <i class="@item.Icon"></i>
+                            <a href="#">@item.Title</a>
+                        </div>
+                    </li>
+                }*@
+            </ul>
+        </div>
+    </div>
+    <div class="catalog-area">
+        <div class="menu-catalog">
+            <a href="#">Каталог товарів</a>
+        </div>
+    </div>
+</section>

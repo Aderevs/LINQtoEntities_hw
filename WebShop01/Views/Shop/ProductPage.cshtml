@@ -1,0 +1,344 @@
+﻿@model BLL.Entity.Product
+<div class="main-product-page">
+    <product-header>
+        <div class="product-header-body">
+           <div class="category-header">
+                <a asp-action="Index">
+                    <i class="fa-solid fa-house-chimney"></i><span>Головна</span>
+                </a>
+                <span class="arrow">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </span>
+                <a asp-action="category" asp-route-category="@Model.Category.Name">
+                    <span>@Model.Category.Name</span>
+                </a>
+                <span class="arrow">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </span>
+                <span>@Model.Name</span>
+            </div>
+            <div class="product-label">
+                <h1 class="product-title">@Model.Name</h1>
+            </div>
+            <div class="product-rating">
+                <div>
+                    <ul class="product-stars">
+                        <li class="product-star">
+                            <svg viewBox="0 0 40 37" xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                    <linearGradient gradientUnits="userSpaceOnUse" id="_01eh91wr3">
+                                        <stop stop-color="#ffa900" stop-opacity="1" offset="1"></stop>
+                                        <stop stop-color="#d2d2d2" stop-opacity="1" offset="100%"></stop>
+                                    </linearGradient>
+                                </defs>
+                                <path d="m19.1147.533962c.3614-.711949 1.409-.711949 1.7704 0l5.4156 10.644638c.1443.283.4223.479.7439.524l12.1088 1.7076c.81.1143 1.1331 1.0805.5478 1.634l-8.7633 8.2861c-.2322.2197-.3389.5373-.2833.8476l2.0679 11.7c.139.7827-.7078 1.3797-1.433 1.0097l-10.8297-5.5231c-.2878-.1467-.632-.1467-.9198 0l-10.83049 5.5231c-.72439.37-1.57126-.227-1.43225-1.0097l2.06797-11.7c.05485-.3103-.0511-.6279-.28405-.8476l-8.761789-8.2861c-.586123-.5535-.2630038-1.5197.547049-1.634l12.10946-1.7076c.3209-.045.5996-.241.7432-.524z" fill="url(#_01eh91wr3)">
+                                </path>
+                            </svg>
+                        </li>
+                        <li class="product-star">
+                            <svg viewBox="0 0 40 37" xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                    <linearGradient gradientUnits="userSpaceOnUse" id="_01eh91wr3">
+                                        <stop stop-color="#ffa900" stop-opacity="1" offset="1"></stop>
+                                        <stop stop-color="#d2d2d2" stop-opacity="1" offset="100%"></stop>
+                                    </linearGradient>
+                                </defs>
+                                <path d="m19.1147.533962c.3614-.711949 1.409-.711949 1.7704 0l5.4156 10.644638c.1443.283.4223.479.7439.524l12.1088 1.7076c.81.1143 1.1331 1.0805.5478 1.634l-8.7633 8.2861c-.2322.2197-.3389.5373-.2833.8476l2.0679 11.7c.139.7827-.7078 1.3797-1.433 1.0097l-10.8297-5.5231c-.2878-.1467-.632-.1467-.9198 0l-10.83049 5.5231c-.72439.37-1.57126-.227-1.43225-1.0097l2.06797-11.7c.05485-.3103-.0511-.6279-.28405-.8476l-8.761789-8.2861c-.586123-.5535-.2630038-1.5197.547049-1.634l12.10946-1.7076c.3209-.045.5996-.241.7432-.524z" fill="url(#_01eh91wr3)">
+                                </path>
+                            </svg>
+                        </li>
+                        <li class="product-star">
+                            <svg viewBox="0 0 40 37" xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                    <linearGradient gradientUnits="userSpaceOnUse" id="_01eh91wr3">
+                                        <stop stop-color="#ffa900" stop-opacity="1" offset="1"></stop>
+                                        <stop stop-color="#d2d2d2" stop-opacity="1" offset="100%"></stop>
+                                    </linearGradient>
+                                </defs>
+                                <path d="m19.1147.533962c.3614-.711949 1.409-.711949 1.7704 0l5.4156 10.644638c.1443.283.4223.479.7439.524l12.1088 1.7076c.81.1143 1.1331 1.0805.5478 1.634l-8.7633 8.2861c-.2322.2197-.3389.5373-.2833.8476l2.0679 11.7c.139.7827-.7078 1.3797-1.433 1.0097l-10.8297-5.5231c-.2878-.1467-.632-.1467-.9198 0l-10.83049 5.5231c-.72439.37-1.57126-.227-1.43225-1.0097l2.06797-11.7c.05485-.3103-.0511-.6279-.28405-.8476l-8.761789-8.2861c-.586123-.5535-.2630038-1.5197.547049-1.634l12.10946-1.7076c.3209-.045.5996-.241.7432-.524z" fill="url(#_01eh91wr3)">
+                                </path>
+                            </svg>
+                        </li>
+                        <li class="product-star">
+                            <svg viewBox="0 0 40 37" xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                    <linearGradient gradientUnits="userSpaceOnUse" id="_01eh91wr3">
+                                        <stop stop-color="#ffa900" stop-opacity="1" offset="1"></stop>
+                                        <stop stop-color="#d2d2d2" stop-opacity="1" offset="100%"></stop>
+                                    </linearGradient>
+                                </defs>
+                                <path d="m19.1147.533962c.3614-.711949 1.409-.711949 1.7704 0l5.4156 10.644638c.1443.283.4223.479.7439.524l12.1088 1.7076c.81.1143 1.1331 1.0805.5478 1.634l-8.7633 8.2861c-.2322.2197-.3389.5373-.2833.8476l2.0679 11.7c.139.7827-.7078 1.3797-1.433 1.0097l-10.8297-5.5231c-.2878-.1467-.632-.1467-.9198 0l-10.83049 5.5231c-.72439.37-1.57126-.227-1.43225-1.0097l2.06797-11.7c.05485-.3103-.0511-.6279-.28405-.8476l-8.761789-8.2861c-.586123-.5535-.2630038-1.5197.547049-1.634l12.10946-1.7076c.3209-.045.5996-.241.7432-.524z" fill="url(#_01eh91wr3)">
+                                </path>
+                            </svg>
+                        </li>
+                        <li class="product-star">
+                            <svg viewBox="0 0 40 37" xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                    <linearGradient gradientUnits="userSpaceOnUse" id="_01eh91wr3">
+                                        <stop stop-color="#ffa900" stop-opacity="1" offset="1"></stop>
+                                        <stop stop-color="#d2d2d2" stop-opacity="1" offset="100%"></stop>
+                                    </linearGradient>
+                                </defs>
+                                <path d="m19.1147.533962c.3614-.711949 1.409-.711949 1.7704 0l5.4156 10.644638c.1443.283.4223.479.7439.524l12.1088 1.7076c.81.1143 1.1331 1.0805.5478 1.634l-8.7633 8.2861c-.2322.2197-.3389.5373-.2833.8476l2.0679 11.7c.139.7827-.7078 1.3797-1.433 1.0097l-10.8297-5.5231c-.2878-.1467-.632-.1467-.9198 0l-10.83049 5.5231c-.72439.37-1.57126-.227-1.43225-1.0097l2.06797-11.7c.05485-.3103-.0511-.6279-.28405-.8476l-8.761789-8.2861c-.586123-.5535-.2630038-1.5197.547049-1.634l12.10946-1.7076c.3209-.045.5996-.241.7432-.524z" fill="url(#_01eh91wr3)">
+                                </path>
+                            </svg>
+                        </li>
+                    </ul>
+                </div>
+                <a class="product-comments-link"> 23 коментаря</a>
+                <p class="product-code"> Код: 3555555</p>
+            </div>
+        </div>
+    </product-header>
+    <product-navbar>
+        <product-navber-items>
+            <div class="tabs">
+                <div class="navbar-layout">
+                    <ul class="tabs-list">
+                        <li class="tabs-item">
+                            <a class="tabs-link active">Усе про товар</a>
+                        </li>
+                        <li class="tabs-item">
+                            <a class="tabs-link">Характеристики</a>
+                        </li>
+                        <li class="tabs-item">
+                            <a class="tabs-link">Відгуки</a>
+                        </li>
+                        <li class="tabs-item">
+                            <a class="tabs-link">Питання</a>
+                        </li>
+                        <li class="tabs-item">
+                            <a class="tabs-link">Фото</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </product-navber-items>
+    </product-navbar>
+    <product-main>
+        <div class="product-main-layout">
+            <div class="product-info">
+                <div class="product-info-left">
+                    <div class="product-main-info">
+                        <product-gallery>
+                            <div class="product-slider">
+                                <div class="main-slide">
+                                    <button class="slider-btn slider-prev non-visible">
+                                        <i class="fas fa-chevron-left"></i>
+                                    </button>
+                                    <div class="main-slide-holder">
+                                        <ul class="main-slide-list">
+                                            <li class="main-slide-item">
+                                                <div class="main-slide-wrap">
+                                                    <div class="main-img-container">
+                                                        <img class="product-picture" src="@Model.ImageUrl">
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="product-slider-footer">
+                                    <span class="product-slider-counter">1/5</span>
+                                </div>
+                            </div>
+                            <div class="preview-slider">
+                                <div class="main-slide">
+                                    <button class="slider-btn slider-prev non-visible">
+                                        <i class="fas fa-chevron-left"></i>
+                                    </button>
+                                    <div class="main-slide-holder">
+                                        <ul class="main-slide-list">
+                                            <li class="main-slide-item">
+                                                <div>
+                                                    <button class="preview-button active">
+                                                        <img class="preview-picture" src="@Model.ImageUrl">
+                                                    </button>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <button class="slider-btn slider-next">
+                                        <i class="fas fa-chevron-right"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </product-gallery>
+                        <p class="product-short-spec">@Model.Description</p>
+                        <div class="product-main-img-spec">
+                            <ul class="product-main-img-spec-list">
+                                <li>
+                                    <img src="https://content1.rozetka.com.ua/goods_tags/images_ua/original/187290917.jpg">
+                                </li>
+                                <li>
+                                    <img src="https://content1.rozetka.com.ua/goods_tags/images_ua/original/187290917.jpg">
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <button class="to-product-description">Детальніше про товар</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-info-right">
+                    <div>
+                        <ul class="product-status">
+                            <li class="product-status-item">
+                                <div>
+                                    <i class="far fa-check-circle status-label--green"></i>
+                                    <p class="status-label status-label--green">Є в наявності</p>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="product-order-info">
+                            <div class="product-trade">
+                                <div class="product-prices--inner">
+                                    @if(Model.ActionPrice > 0)
+                                    {
+                                        <p class="product-prices--big product-prices--red">
+                                            @Model.ActionPrice
+                                            <span class="product-prices--symbol">₴</span>
+                                        </p>
+                                        <p class="product-prices--small">
+                                            @Model.Price
+                                            <span>₴</span>
+                                        </p>
+                                    }
+                                    else
+                                    {
+                                        <p class="product-prices--big product-prices--red">
+                                            @Model.Price
+                                            <span class="product-prices--symbol">₴</span>
+                                        </p>
+                                    }
+                                </div>
+                                <ul class="product-buttons">
+                                    <li class="product-buttons--item">
+                                        <div class="product-buy">
+                                            <button class="button-buy">
+                                                <i class="fas fa-shopping-cart"></i>
+                                                <span>Купити</span>
+                                            </button>
+                                        </div>
+                                    </li>
+                                    <li class="product-buttons--item next-product-buttons--item">
+                                        <div class="product-buy">
+                                            <button class="button-buy">Купити в кредит</button>
+                                        </div>
+                                    </li>
+                                    <li class="product-buttons--item next-product-buttons--item">
+                                        <ul class="product-actions">
+                                            <li class="product-actions--item">
+                                                <div>
+                                                    <button class="product-actions-button">
+                                                        <i class="fas fa-balance-scale icon-gray"></i>
+                                                    </button>
+                                                </div>
+                                            </li>
+                                            <li class="product-actions--item">
+                                                <div class="wish-wrapper">
+                                                    <button class="product-actions-button">
+                                                        <i class="far fa-heart icon-orange"></i>
+                                                    </button>
+                                                    <p class="wish-count-text">1060</p>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="product-info">
+                <div class="product-info-left">
+                    <div class="product-description">
+                        <h3 class="product-description-label">
+                            Опис
+                            <span class="product-description-label-gray">@Model.Name</span>
+                        </h3>
+                        <div class="product-description-content">
+                            <p>
+                                <strong>
+                                    Основні характеристики моделі
+                                </strong>
+                                <br>@Model.Description
+                            </p>
+                            <p>
+                                <strong>
+                                    Переваги
+                                </strong>
+                                <br>@Model.DescriptionField1
+                            </p>
+                            <p>
+                                <strong>
+                                    Недоліки
+                                </strong>
+                                <br>@Model.DescriptionField2
+                            </p>
+                        </div>
+                        <button class="product-description-full">
+                            <span>Читати повністю</span>
+                        </button>
+                    </div>
+                    <div class="product-characteristics">
+                        <h2 class="product-description-label">
+                            Характеристики
+                            <span class="product-description-label-gray">@Model.Name</span>
+                        </h2>
+                        <div>
+                            <section>
+                                <dl>
+                                    <div class="characteristics-item">
+                                        <dt class="characteristics-item--label">
+                                            <span>Серія</span>
+                                        </dt>
+                                        <dd class="characteristics-item--value">
+                                            <a href="">TUF Gaming</a>
+                                        </dd>
+                                    </div>
+                                    <div class="characteristics-item">
+                                        <dt class="characteristics-item--label">
+                                            <span>Серія</span>
+                                        </dt>
+                                        <dd class="characteristics-item--value">
+                                            <a href="">TUF Gaming</a>
+                                        </dd>
+                                    </div>
+                                    <div class="characteristics-item">
+                                        <dt class="characteristics-item--label">
+                                            <span>Серія</span>
+                                        </dt>
+                                        <dd class="characteristics-item--value">
+                                            <a href="">TUF Gaming</a>
+                                        </dd>
+                                    </div>
+                                    <div class="characteristics-item">
+                                        <dt class="characteristics-item--label">
+                                            <span>Серія</span>
+                                        </dt>
+                                        <dd class="characteristics-item--value">
+                                            <a href="">TUF Gaming</a>
+                                        </dd>
+                                    </div>
+                                    <div class="characteristics-item">
+                                        <dt class="characteristics-item--label">
+                                            <span>Серія</span>
+                                        </dt>
+                                        <dd class="characteristics-item--value">
+                                            <a href="">TUF Gaming</a>
+                                        </dd>
+                                    </div>
+                                </dl>
+                            </section>
+                        </div>
+                        <a apprzroute="" class="product-all-characteristics"> Дивитися всі характеристики&nbsp;→ </a>
+                    </div>
+                </div>
+                <div class="product-info-right">
+                </div>
+            </div>
+        </div>
+    </product-main>
+</div>
