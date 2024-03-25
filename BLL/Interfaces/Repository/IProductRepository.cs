@@ -5,5 +5,7 @@ namespace BLL.Interfaces.Repository
     public interface IProductRepository : IBaseRepository<Product>
     {
         Task<Product> GetByIdIncludWord(string name);
+        Task<IEnumerable<Product>> SelectIncludeCategory();
+
     }
 }

@@ -23,7 +23,7 @@ namespace BLL.Entity
         [JsonIgnore]
         public List<Cart> Cart { get; set; }
         [JsonIgnore]
-        public List<KeyParamsRepository> KeyWords { get; set; }
+        public List<KeyParams> KeyWords { get; set; }
         public Product()
         {
             ImageUrl= string.Empty;

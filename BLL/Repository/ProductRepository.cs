@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using BLL.Entity;
 using BLL.Interfaces.Repository;
+using DAL_V2;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -46,6 +47,11 @@ namespace BLL.Repository
         public async Task<IEnumerable<Product>> Select()
         {
             var entity = await _productRepository.Select();
+            return _mapper.Map<List<Product>>(entity);
+        }
+        public async Task<IEnumerable<Product>> SelectIncludeCategory()
+        {
+            var entity = await _productRepository.SelectIncludeCategory();
             return _mapper.Map<List<Product>>(entity);
         }
 
