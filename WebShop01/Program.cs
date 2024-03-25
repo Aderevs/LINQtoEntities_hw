@@ -17,7 +17,7 @@ namespace WebShop01
     {
         public static void Main(string[] args)
         {
-            //FillDatabase();
+            FillDatabase();
             var builder = WebApplication.CreateBuilder(args);
 
             IConfiguration configuration = builder.Configuration;
@@ -107,12 +107,12 @@ namespace WebShop01
                     new DAL_V2.Entity.Category
                     {
                         Id = categoryIds[1],
-                        Name = "Garden equipment"
+                        Name = "Garden_equipment"
                     },
                     new DAL_V2.Entity.Category
                     {
                         Id = categoryIds[2],
-                        Name = "Household chemicals"
+                        Name = "Household_chemicals"
                     }
                 };
 

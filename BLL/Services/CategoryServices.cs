@@ -1,6 +1,7 @@
 ﻿using BLL.Entity;
 using BLL.Interfaces.Repository;
 using BLL.Interfaces.Services;
+using System.Linq;
 using System.Xml.Linq;
 
 namespace BLL.Services
@@ -50,18 +51,44 @@ namespace BLL.Services
             var categories = await _categoryRepository.SelectIncludeProducts();
             var certainCategory = categories
                 .FirstOrDefault(c => c.Name == category);
-            if(certainCategory != null)
+            if (certainCategory != null)
             {
 
                 var maxPrice = certainCategory.Products
                     .Max(p => p.Price);
                 var minPrice = certainCategory.Products
                     .Min(p => p.Price);
+                Dictionary<string, List<string>> selectionsComfortable = new();
+                foreach(var product in certainCategory.Products)
+                {
+                    foreach(var word in product.KeyWords)
+                    {
+                        if (!selectionsComfortable.ContainsKey(word.KeyWords.Header))
+                        {
+                            selectionsComfortable.Add(word.KeyWords.Header, new());
+                        }
+                        else
+                        {
+                            selectionsComfortable[word.KeyWords.Header].Add(word.KeyWords.KeyWord);
+                        }
+                    }
+                }
+                    Dictionary<string, string[]> selections = new();
+                    foreach (var selection in selectionsComfortable)
+                    {
+                        string[] words = new string[selection.Value.Count];
+                        for (int i = 0; i < selection.Value.Count; i++)
+                        {
+                            words[i] = selection.Value[i];
+                        }
+                        selections.Add(selection.Key, words);
+                    }
                 return new CategoryInfo
                 {
                     MaxPrice = maxPrice,
                     MinPrice = minPrice,
-                    CategoryName = category
+                    CategoryName = category,
+                    Selections = selections
                 };
             }
             else
